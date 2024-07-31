@@ -17,6 +17,39 @@ The Student Management System is a web application built with Java and the Sprin
 - **MySQL**: Relational database for storing data.
 - **Maven**: Build tool used for managing dependencies and project build.
 
+## API Endpoint
+
+[ **GET** ]
+```
+/api/allStudents
+Description: Retrieve all students.
+
+/api/student/{id}
+Description: Retrieve a student by ID.
+
+/api/student/firstName={firstName}
+Description: Retrieve students by first name.
+
+/api/student/email={email}
+Description: Retrieve students by email.
+```
+
+**POST**
+```
+/api/addStudent
+Description: Add a new student.
+```
+**PUT**
+```
+/api/updateStudent/{id}
+Description: Update student details by ID.
+```
+**DELETE**
+```
+/api/deleteStudent/{id}
+Description: Delete a student by ID.
+```
+
 ## Installation
 
 ### Prerequisites
