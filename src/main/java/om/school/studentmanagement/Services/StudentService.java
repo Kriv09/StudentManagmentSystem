@@ -27,19 +27,15 @@ public class StudentService {
         return studentRepository.findAll();
     }
 
-    public Student getStudentByFirstName(String firstName) throws StudentNotFoundException
+    public List<Student> getStudentsByFirstName(String firstName)
     {
-        return studentRepository.findByFirstName(firstName)
-                .orElseThrow(
-                        () -> new StudentNotFoundException("Student with firstName " + firstName + " not found")
-                );
+        return studentRepository.findByFirstName(firstName);
+
     }
 
-    public Student getStudentByEmail(String email) throws StudentNotFoundException {
-        return studentRepository.findByEmail(email)
-                .orElseThrow(
-                        () -> new StudentNotFoundException("Student with email " + email + " not found")
-                );
+    public List<Student> getStudentsByEmail(String email)   {
+        return studentRepository.findByEmail(email);
+
     }
 
 
